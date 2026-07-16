@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/mDBKJ3MJ/doc-smile-logo-transparent.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doc Smile | Ortodoncia y Estética Facial en Ambato</title>
+  <meta name="description"
+    content="Doc Smile Ambato. Tu mejor versión comienza aquí: Ortodoncia invisible, diseño de sonrisa, bichectomía y estética facial con enfoque juvenil y profesional." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* ===== RESET & VARIABLES ===== */
+    :root {
+      --color-primary: #331557;
+      /* Púrpura oscuro elegante basado en la imagen */
+      --color-primary-light: #5B2C8C;
+      --color-primary-dark: #1E083B;
+      --color-accent: #F3BA2F;
+      /* Dorado/Amarillo vibrante */
+      --color-accent-light: #F7D06A;
+      --color-accent-dark: #C8951D;
+      --color-bg: #FFFFFF;
+      --color-surface: #FAFAFA;
+      --color-surface-purple: #F0E8F7;
+      /* Púrpura muy suave para fondos */
+      --color-white: #FFFFFF;
+      --color-text: #2D3748;
+      --color-text-light: #718096;
+      --color-border: #E2E8F0;
+
+      --gradient-primary: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+      --gradient-accent: linear-gradient(135deg, #FFD54F 0%, var(--color-accent) 100%);
+      --gradient-dark: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius: 20px;
+      /* Radios amplios y amigables/juveniles */
+      --radius-sm: 12px;
+      --transition: 0.3s ease;
+      --shadow-sm: 0 4px 15px rgba(51, 21, 87, 0.08);
+      --shadow-card: 0 12px 30px rgba(51, 21, 87, 0.08);
+      --shadow-hover: 0 20px 40px rgba(243, 186, 47, 0.15);
+
+      --max-width: 1200px;
+      --header-height: 90px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    /* ===== UTILITIES ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-tag {
+      font-family: var(--font-title);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 15px;
+      display: inline-block;
+      background: rgba(255, 64, 129, 0.1);
+      padding: 8px 20px;
+      border-radius: 50px;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(34px, 4vw, 46px);
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .section-title span {
+      color: var(--color-accent);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .btn-primary,
+    .btn-accent,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all var(--transition);
+      cursor: pointer;
+      border-radius: 50px;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--color-white);
+      box-shadow: 0 8px 20px rgba(51, 21, 87, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--gradient-dark);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(51, 21, 87, 0.4);
+    }
+
+    .btn-accent {
+      background: var(--gradient-accent);
+      color: var(--color-primary-dark);
+      box-shadow: 0 8px 20px rgba(243, 186, 47, 0.3);
+    }
+
+    .btn-accent:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(243, 186, 47, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--color-surface-purple);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .btn-secondary:hover {
+      background: var(--gradient-primary);
+      color: var(--color-white);
+      transform: translateY(-4px);
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(30, 8, 59, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 180px;
+      height: auto;
+    }
+
+    .logo-text {
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--color-white);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--font-title);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-link {
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color var(--transition);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-link:hover,
+    .nav-link--active {
+      color: var(--color-accent);
+    }
+
+    .nav-cta {
+      background: var(--gradient-accent);
+      color: var(--color-primary-dark);
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-family: var(--font-title);
+      font-size: 14px;
+      font-weight: 700;
+      transition: all var(--transition);
+      box-shadow: 0 4px 15px rgba(243, 186, 47, 0.3);
+    }
+
+    .nav-cta:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(243, 186, 47, 0.4);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: var(--color-white);
+      border-radius: 3px;
+      transition: all var(--transition);
+    }
+
+    .menu-toggle.is-active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.is-active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -7px);
+    }
+
+    .nav-mobile {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      height: 100dvh;
+      background: var(--color-white);
+      padding: 100px 32px 40px;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+      transition: right 0.4s ease;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav-mobile.is-open {
+      right: 0;
+    }
+
+    .nav-mobile .nav-link {
+      font-size: 18px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-overlay.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ===== VIEWS (SPA) ===== */
+    .view {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .view--active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      padding: 60px 0 100px;
+      position: relative;
+      background: var(--color-surface-purple);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(243, 186, 47, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-content {
+      padding-right: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(40px, 5vw, 60px);
+      font-weight: 900;
+      color: var(--color-primary);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--color-accent);
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--color-text-light);
+      margin-bottom: 40px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 40px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      z-index: 2;
+      border: 8px solid var(--color-white);
+    }
+
+    .floating-card-1 {
+      position: absolute;
+      bottom: 40px;
+      left: -40px;
+      background: var(--color-white);
+      padding: 20px 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      z-index: 5;
+    }
+
+    .floating-card-1 .icon {
+      font-size: 32px;
+      color: var(--color-accent);
+    }
+
+    .floating-card-1 div h4 {
+      font-family: var(--font-title);
+      font-size: 18px;
+      color: var(--color-primary);
+      font-weight: 800;
+    }
+
+    .floating-card-1 div p {
+      font-size: 13px;
+      color: var(--color-text-light);
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* ===== FEATURES BAR ===== */
+    .features-bar {
+      position: relative;
+      z-index: 20;
+      padding: 60px 0;
+      background: var(--color-white);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 30px;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(74, 20, 140, 0.1);
+      background: var(--color-white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-icon {
+      width: 65px;
+      height: 65px;
+      background: var(--color-surface-purple);
+      color: var(--color-primary);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+    }
+
+    .feature-item:hover .feature-icon {
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: rotate(10deg);
+    }
+
+    .feature-item h4 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .feature-item p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== SERVICES PREVIEW (Destacados) ===== */
+    .services-section {
+      padding: 100px 0;
+      background: var(--color-white);
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 60px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: all var(--transition);
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-accent-light);
+    }
+
+    .service-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .service-card:hover .service-img {
+      transform: scale(1.05);
+    }
+
+    .service-content {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background: var(--color-white);
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-content h3 {
+      font-family: var(--font-title);
+      font-size: 22px;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .service-content p {
+      color: var(--color-text-light);
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--color-accent);
+      transition: 0.3s;
+    }
+
+    .service-card:hover .service-link {
+      color: var(--color-primary);
+      gap: 12px;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+      padding: 100px 0;
+      background: var(--color-surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image-col {
+      position: relative;
+      margin: 20px 0 20px 20px;
+      z-index: 1;
+    }
+
+    .about-image-col img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      border: 4px solid var(--color-white);
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-image-col::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 90%;
+      height: 90%;
+      border: 4px solid var(--color-accent);
+      border-radius: var(--radius);
+      z-index: 0;
+    }
+
+    .about-image-col::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      width: 50%;
+      height: 50%;
+      background: var(--gradient-primary);
+      opacity: 0.1;
+      z-index: 0;
+      border-radius: var(--radius);
+    }
+
+    .about-text-col {
+      padding-left: 20px;
+    }
+
+    .about-text-col p {
+      font-size: 16px;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .stat-card {
+      background: var(--color-white);
+      padding: 25px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-card h3 {
+      font-family: var(--font-title);
+      font-size: 38px;
+      color: var(--color-primary);
+      margin-bottom: 5px;
+      font-weight: 900;
+    }
+
+    .stat-card p {
+      font-size: 13px;
+      color: var(--color-text-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== PAGE HEADERS (BANNERS) ===== */
+    .page-header {
+      padding: 130px 0 90px;
+      color: var(--color-white);
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(51, 21, 87, 0.9) 0%, rgba(30, 8, 59, 0.95) 100%);
+    }
+
+    .page-header .container {
+      position: relative;
+      z-index: 10;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-title);
+      font-size: 50px;
+      margin-bottom: 16px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .header-nosotros {
+      background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000');
+    }
+
+    .header-servicios {
+      background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2000');
+    }
+
+    .header-contacto {
+      background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000');
+    }
+
+    /* ===== CLÍNICA PAGE (NOSOTROS) ===== */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .mv-card {
+      padding: 50px 40px;
+      background: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 5px solid var(--color-primary);
+    }
+
+    .mv-card:hover {
+      border-bottom-color: var(--color-accent);
+      transform: translateY(-5px);
+    }
+
+    .mv-card .icon {
+      font-size: 45px;
+      color: var(--color-accent);
+      margin-bottom: 25px;
+    }
+
+    .mv-card h3 {
+      font-family: var(--font-title);
+      font-size: 26px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+
+    .mv-card p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== MODAL DE TRATAMIENTOS ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(74, 20, 140, 0.7);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-overlay.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      max-width: 850px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: scale(0.95);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-overlay.is-visible .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .modal-content::-webkit-scrollbar-track {
+      background: var(--color-surface);
+      border-radius: 0 24px 24px 0;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+      background: var(--color-border);
+      border-radius: 10px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb:hover {
+      background: var(--color-accent);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      background: var(--color-surface);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 20;
+      transition: all 0.3s;
+    }
+
+    .modal-close:hover {
+      background: var(--color-accent);
+      color: var(--color-white);
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 60px 50px;
+    }
+
+    .modal-body h2 {
+      font-family: var(--font-title);
+      font-size: 36px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .modal-body p.modal-desc {
+      color: var(--color-text-light);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    .modal-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .modal-gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+
+    .modal-features {
+      background: var(--color-surface-purple);
+      padding: 35px;
+      border-radius: var(--radius-sm);
+      border-left: 5px solid var(--color-primary);
+    }
+
+    .modal-features h4 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .modal-features ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .modal-features li {
+      position: relative;
+      padding-left: 30px;
+      color: var(--color-text);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .modal-features li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--color-accent);
+    }
+
+    /* ===== CONTACTO ===== */
+    .contact-page-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      padding: 100px 0;
+    }
+
+    .contact-form-box {
+      background: var(--color-white);
+      padding: 50px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--color-text);
+      font-size: 14px;
+      font-family: var(--font-body);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      background: var(--color-surface);
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      background: var(--color-white);
+    }
+
+    .contact-info-box h3 {
+      font-family: var(--font-title);
+      font-size: 34px;
+      color: var(--color-primary);
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 35px;
+      background: var(--color-white);
+      padding: 25px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+
+    .info-item .icon {
+      width: 55px;
+      height: 55px;
+      background: var(--color-surface-purple);
+      color: var(--color-primary);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .info-item h4 {
+      font-family: var(--font-title);
+      font-size: 19px;
+      margin-bottom: 6px;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .info-item p {
+      color: var(--color-text-light);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* ===== CTA BANNER ===== */
+    .cta-section {
+      padding: 100px 0;
+      background: var(--color-surface);
+    }
+
+    .cta-wrapper {
+      background: var(--gradient-dark);
+      border-top: 5px solid var(--color-accent);
+      border-radius: var(--radius);
+      padding: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-hover);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-content {
+      color: var(--color-white);
+      max-width: 550px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-content h2 {
+      font-family: var(--font-title);
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .cta-content p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+    }
+
+    .cta-actions {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* WIDGETS FLOTANTES */
+    .floating-widgets {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn-floating {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .btn-floating:hover {
+      transform: scale(1.1);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--color-primary-dark);
+      color: #FFFFFF;
+      padding: 100px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--color-white);
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      color: #B39DDB;
+      margin-bottom: 30px;
+      max-width: 380px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      color: var(--color-white);
+      font-size: 18px;
+    }
+
+    .social-links a:hover {
+      background: var(--color-accent);
+      transform: translateY(-4px);
+    }
+
+    .footer-title {
+      font-family: var(--font-title);
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: var(--color-white);
+      font-weight: 700;
+    }
+
+    .footer-links li {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #B39DDB;
+      transition: color var(--transition);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent-light);
+      padding-left: 5px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+      color: #B39DDB;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-list i {
+      color: var(--color-accent);
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+      }
+
+      .hero-content {
+        padding-right: 0;
+      }
+
+      .hero-desc {
+        margin: 0 auto 40px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .floating-card-1 {
+        left: 20px;
+        bottom: 20px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .about-text-col {
+        text-align: center;
+        padding: 0 8%;
+      }
+
+      .about-image-col {
+        margin: 20px 15px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 50px 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-page-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-image {
+        height: 400px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-text-col {
+        padding: 0 4%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .page-header h1 {
+        font-size: 40px;
+      }
+
+      .modal-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-features ul {
+        grid-template-columns: 1fr;
+      }
+
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="#/inicio" class="logo" onclick="app.navigate('inicio')" style="display:flex; align-items:center;">
+        <img src="https://i.postimg.cc/mDBKJ3MJ/doc-smile-logo-transparent.png" alt="Doc Smile Logo" style="height: 60px; width: auto; object-fit: contain; margin-top: 5px;">
+      </a>
+
+      <nav class="nav">
+        <a href="#/inicio" class="nav-link nav-link--active" data-link="inicio">Inicio</a>
+        <a href="#/nosotros" class="nav-link" data-link="nosotros">Nosotros</a>
+        <a href="#/servicios" class="nav-link" data-link="servicios">Servicios Estrella</a>
+        <a href="#/contacto" class="nav-link" data-link="contacto">Ubicación</a>
+        <a href="#/contacto" class="nav-cta" data-link="contacto">Valoración Gratis</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#/inicio" class="nav-link nav-link--active" data-link="inicio">Inicio</a>
+    <a href="#/nosotros" class="nav-link" data-link="nosotros">Nosotros</a>
+    <a href="#/servicios" class="nav-link" data-link="servicios">Servicios Estrella</a>
+    <a href="#/contacto" class="nav-link" data-link="contacto">Ubicación</a>
+    <a href="#/contacto" class="btn-primary" data-link="contacto" style="margin-top:20px;">Valoración Gratis</a>
+  </nav>
+
+  <!-- ROUTER PRINCIPAL -->
+  <main id="app">
+
+    <!-- INICIO -->
+    <div class="view view--active" id="view-inicio">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="section-tag">Diseñamos tu mejor versión</span>
+            <h1>Sonríe con <span>Seguridad</span>, Vive con Estilo.</h1>
+            <p class="hero-desc">En Doc Smile fusionamos la ortodoncia moderna con la armonización estética facial.
+              Consigue los resultados que siempre quisiste en un ambiente profesional, relajado y hecho para ti.</p>
+
+            <div class="hero-buttons">
+              <a href="#/contacto" class="btn-primary" data-link="contacto">Reserva tu Cita</a>
+              <a href="#/servicios" class="btn-secondary" data-link="servicios">Ver Tratamientos</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200&auto=format&fit=crop"
+              alt="Chica joven sonriendo" class="hero-image">
+            <div class="floating-card-1">
+              <div class="icon"><i class="fa-regular fa-face-smile-wink"></i></div>
+              <div>
+                <h4>Cero Miedos</h4>
+                <p>Odontología sin dolor garantizada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Bar -->
+      <div class="features-bar">
+        <div class="container">
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+              <h4>Estética Perfecta</h4>
+              <p>Materiales de alta gama para resultados súper naturales que resaltan tu belleza.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Tratamientos Rápidos</h4>
+              <p>Optimizamos el tiempo clínico para que veas cambios desde las primeras semanas.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
+              <h4>Profesionales Top</h4>
+              <p>Especialistas capacitados con certificaciones vigentes y excelente trato humano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Preview -->
+      <section class="about-section">
+        <div class="container about-grid">
+          <div class="about-image-col">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000&auto=format&fit=crop"
+              alt="Especialista Doc Smile en consulta">
+          </div>
+
+          <div class="about-text-col">
+            <span class="section-tag">Nuestra Filosofía</span>
+            <h2 class="section-title">No somos una clínica <span>común y corriente.</span></h2>
+            <p>Sabemos que ir al dentista suele ser aburrido o dar miedo. En Doc Smile cambiamos las reglas del juego.
+              Hemos creado un espacio donde te sentirás cómodo, escuchado y seguro.</p>
+            <p>Trabajamos bajo protocolos clínicos serios y estrictos, pero con una vibra joven y cercana. Nos enfocamos
+              fuertemente en la estética dental y facial porque sabemos lo importante que es tu imagen para tu confianza
+              diaria.</p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <h3>100%</h3>
+                <p>Valoraciones Personalizadas</p>
+              </div>
+              <div class="stat-card">
+                <h3>+2k</h3>
+                <p>Pacientes Felices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Preview -->
+      <section class="services-section">
+        <div class="container">
+          <div class="services-header">
+            <span class="section-tag">Lo más pedido</span>
+            <h2 class="section-title">Servicios <span>Estrella</span></h2>
+            <p style="color: var(--color-text-light); font-size: 16px;">Procedimientos enfocados en perfilar tu rostro y
+              lograr una sonrisa deslumbrante, de la mano de expertos.</p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Servicio 1: Ortodoncia -->
+            <div class="service-card" onclick="openModal('ortodoncia')">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800" alt="Ortodoncia"
+                class="service-img">
+              <div class="service-content">
+                <h3>Ortodoncia Avanzada</h3>
+                <p>Alineadores invisibles y brackets estéticos para enderezar tus dientes rápidamente sin que nadie lo
+                  note.</p>
+                <div class="service-link">Ver Opciones <i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+            </div>
+
+            <!-- Servicio 2: Diseño Sonrisa -->
+            <div class="service-card" onclick="openModal('sonrisa')">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800" alt="Diseño de Sonrisa"
+                class="service-img">
+              <div class="service-content">
+                <h3>Diseño de Sonrisa</h3>
+                <p>Carillas de alta estética. Cambiamos el color, tamaño y forma de tus dientes para que brilles al
+                  sonreír.</p>
+                <div class="service-link">Descubrir Más <i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+            </div>
+
+            <!-- Servicio 3: Estética Facial -->
+            <div class="service-card" onclick="openModal('facial')">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800"
+                alt="Bichectomía y Facial" class="service-img">
+              <div class="service-content">
+                <h3>Armonización Facial</h3>
+                <p>Bichectomía y lipopapada. Perfilamos tu rostro para resaltar tus pómulos y definir tu mandíbula.</p>
+                <div class="service-link">Ver Procedimientos <i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" style="margin-top: 60px;">
+            <a href="#/servicios" class="btn-secondary" data-link="servicios">Ver todos los servicios</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" style="background: var(--color-white);">
+        <div class="container">
+          <div class="cta-wrapper">
+            <div class="cta-content">
+              <h2>¿List@ para dar el primer paso?</h2>
+              <p>Agenda hoy tu cita de valoración. Te explicaremos todas las opciones disponibles sin compromisos y con
+                total transparencia.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="#/contacto" class="btn-primary" data-link="contacto"
+                style="background: var(--color-white); color: var(--color-primary); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Agendar
+                Valoración Gratis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- NOSOTROS -->
+    <div class="view" id="view-nosotros">
+      <div class="page-header header-nosotros">
+        <div class="container">
+          <span class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Doc Smile Ambato</span>
+          <h1>Profesionalismo & Empatía</h1>
+          <p>Combinamos ciencia médica con un trato fresco para que ames tus resultados.</p>
+        </div>
+      </div>
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px;">
+
+        <div class="about-grid" style="margin-bottom: 80px;">
+          <div class="about-text-col">
+            <h2 class="section-title">Hacemos que ir al dentista <span>sea cool.</span></h2>
+            <p>Olvídate del estrés, los dolores y los presupuestos confusos. En Doc Smile en Ambato, hemos diseñado un
+              espacio pensado en ti. Al entrar, notarás que nuestra clínica huele bien, la música es relajante y nuestro
+              equipo te recibe con la mejor actitud.</p>
+            <p>Pero no te dejes engañar por nuestra vibra juvenil; en el sillón dental somos 100% clínicos, rigurosos y
+              perfeccionistas. Utilizamos esterilización de grado hospitalario y los mejores materiales importados para
+              asegurar que cada tratamiento sea seguro y duradero.</p>
+          </div>
+          <div class="about-image-col">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop"
+              alt="Equipo Doc Smile sonriendo">
+          </div>
+        </div>
+
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Nuestra Misión</h3>
+            <p>Elevar la confianza y seguridad de nuestros pacientes mediante tratamientos de ortodoncia y estética
+              facial de altísima calidad, brindando una experiencia libre de dolor, honesta y accesible.</p>
+          </div>
+          <div class="mv-card">
+            <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Nuestra Visión</h3>
+            <p>Posicionarnos como la clínica dental y de estética facial más innovadora y preferida por los jóvenes y
+              adultos modernos en la ciudad de Ambato, rompiendo los esquemas de la odontología tradicional.</p>
+          </div>
+          <div class="mv-card">
+            <div class="icon"><i class="fa-solid fa-star"></i></div>
+            <h3>Nuestros Valores</h3>
+            <p>Transparencia en precios, honestidad diagnóstica (no vendemos tratamientos que no necesitas), constante
+              actualización médica y sobre todo, mucha empatía.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SERVICIOS ESTRELLA -->
+    <div class="view" id="view-servicios">
+      <div class="page-header header-servicios">
+        <div class="container">
+          <span class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Nuestro Portafolio</span>
+          <h1>Servicios Estrella</h1>
+          <p>Descubre todo lo que podemos hacer para potenciar tus rasgos y sonrisa.</p>
+        </div>
+      </div>
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px;">
+
+        <div class="services-grid">
+          <!-- Item 1 -->
+          <div class="service-card" onclick="openModal('ortodoncia')">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800" alt="Ortodoncia"
+              class="service-img">
+            <div class="service-content">
+              <h3>Ortodoncia & Alineadores</h3>
+              <p>Opciones desde brackets metálicos tradicionales, zafiro estéticos, hasta los modernos alineadores
+                invisibles. Tratamientos eficientes y controlados paso a paso.</p>
+              <div class="service-link">Ver Detalles <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="service-card" onclick="openModal('sonrisa')">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800" alt="Diseño de Sonrisa"
+              class="service-img">
+            <div class="service-content">
+              <h3>Diseño de Sonrisa (Carillas)</h3>
+              <p>Cambia radicalmente tu sonrisa en un par de citas. Carillas de resina de alta estética o disilicato,
+                logrando el color blanco natural que siempre soñaste.</p>
+              <div class="service-link">Ver Detalles <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="service-card" onclick="openModal('facial')">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Armonización Facial"
+              class="service-img">
+            <div class="service-content">
+              <h3>Bichectomía & Lipopapada</h3>
+              <p>Cirugías estéticas faciales menores, seguras y rápidas. Afina tu rostro extrayendo las bolsas de bichat
+                y elimina la molesta papada definitivamente.</p>
+              <div class="service-link">Ver Detalles <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="service-card" onclick="openModal('blanqueamiento')">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800"
+              alt="Blanqueamiento Dental" class="service-img">
+            <div class="service-content">
+              <h3>Blanqueamiento Láser</h3>
+              <p>Aclara varios tonos de tus dientes en solo 45 minutos. Utilizamos geles que protegen tu esmalte y
+                reducen al máximo la sensibilidad.</p>
+              <div class="service-link">Ver Detalles <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="service-card" onclick="openModal('general')">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Odontología General"
+              class="service-img">
+            <div class="service-content">
+              <h3>Odontología General</h3>
+              <p>El cuidado básico nunca pasa de moda. Limpiezas ultrasónicas profundas, curación de caries con resinas
+                estéticas y extracciones (incluyendo muelas del juicio).</p>
+              <div class="service-link">Ver Detalles <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="view" id="view-contacto">
+      <div class="page-header header-contacto">
+        <div class="container">
+          <span class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">Escríbenos</span>
+          <h1>Ubicación & Contacto</h1>
+          <p>Estamos en Ambato. Escríbenos por WhatsApp y reserva tu espacio hoy mismo.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contact-page-wrapper">
+          <div class="contact-info-box">
+            <h3>Ven a visitarnos</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 40px; font-size: 16px;">Te esperamos en
+              instalaciones súper cómodas. Nuestro equipo está listo para recibirte y resolver todas tus dudas sobre
+              precios y procedimientos.</p>
+
+            <div class="info-item">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Nuestra Clínica</h4>
+                <p>Av. Barcelona 05-28, Ambato.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <h4>WhatsApp Citas</h4>
+                <p>099 226 130</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <h4>Horarios de Atención</h4>
+                <p>Lunes a Sábado: 09:00 - 19:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box">
+            <h3
+              style="font-family:var(--font-title); font-size:26px; color:var(--color-primary); margin-bottom:25px; font-weight:800;">
+              Solicitar Cita de Valoración</h3>
+            <form
+              onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Te contactaremos vía WhatsApp lo más pronto posible.');">
+              <div class="form-group">
+                <label>Tu Nombre y Apellido</label>
+                <input type="text" placeholder="¿Cómo te llamas?" required>
+              </div>
+              <div class="form-group">
+                <label>Tu número de WhatsApp</label>
+                <input type="tel" placeholder="099 XXX XXX" required>
+              </div>
+              <div class="form-group">
+                <label>¿Qué te interesa mejorar?</label>
+                <select required>
+                  <option value="">Selecciona una opción...</option>
+                  <option>Ortodoncia / Brackets</option>
+                  <option>Diseño de Sonrisa (Carillas)</option>
+                  <option>Bichectomía / Lipopapada</option>
+                  <option>Limpieza y blanqueamiento</option>
+                  <option>Chequeo General / Otro</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%; margin-top:10px; font-size:16px;">Enviar
+                Solicitud <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODALS DE TRATAMIENTOS -->
+  <div class="modal-overlay" id="serviceModal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></div>
+      <div class="modal-body">
+        <h2 id="modalTitle">Título del Procedimiento</h2>
+        <p class="modal-desc" id="modalDesc">Descripción...</p>
+
+        <div class="modal-gallery" id="modalGallery">
+          <!-- Imágenes inyectadas -->
+        </div>
+
+        <div class="modal-features">
+          <h4>¿Por qué elegir este tratamiento con nosotros?</h4>
+          <ul id="modalFeaturesList">
+            <!-- Lista inyectada -->
+          </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#/contacto" class="btn-accent" onclick="closeModal(); app.navigate('contacto')">Quiero Agendar una
+            Cita</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WIDGETS FLOTANTES -->
+  <div class="floating-widgets">
+    <a href="https://wa.me/59399226130" target="_blank" class="btn-floating btn-whatsapp"
+      title="Escríbenos por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color: white; margin-bottom: 10px;">Doc Smile</div>
+          <p
+            style="font-family: var(--font-title); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--color-accent-light); margin-bottom: 20px;">
+            Estética & Ortodoncia</p>
+          <p>Más que una clínica dental, somos el lugar donde encuentras tu mejor versión. Excelencia clínica en un
+            ambiente relajado y juvenil en Ambato.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Menú</h4>
+          <ul class="footer-links">
+            <li><a href="#/inicio" onclick="app.navigate('inicio')">Inicio</a></li>
+            <li><a href="#/nosotros" onclick="app.navigate('nosotros')">Nosotros</a></li>
+            <li><a href="#/servicios" onclick="app.navigate('servicios')">Servicios Estrella</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Datos de Contacto</h4>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-map-pin"></i><span>Av. Barcelona 05-28, Ambato.</span></li>
+            <li><i class="fa-brands fa-whatsapp"></i><span>099 226 130</span></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; color: #B39DDB; font-size: 13px;">
+        &copy; 2026 Doc Smile Ambato. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // SPA Logic
+    const app = {
+      views: document.querySelectorAll('.view'),
+      links: document.querySelectorAll('a[data-link]'),
+      navigate: function (viewId) {
+        window.location.hash = '/' + viewId;
+        this.views.forEach(view => view.classList.remove('view--active'));
+        const targetView = document.getElementById('view-' + viewId);
+        if (targetView) {
+          targetView.classList.add('view--active');
+          window.scrollTo(0, 0);
+        } else {
+          document.getElementById('view-inicio').classList.add('view--active');
+        }
+
+        // Update nav active states
+        this.links.forEach(link => {
+          link.classList.remove('nav-link--active');
+          if (link.getAttribute('data-link') === viewId) link.classList.add('nav-link--active');
+        });
+
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('navMobile');
+        const overlay = document.getElementById('navOverlay');
+        const toggle = document.getElementById('menuToggle');
+        if (mobileMenu && mobileMenu.classList.contains('is-open')) {
+          mobileMenu.classList.remove('is-open');
+          overlay.classList.remove('is-visible');
+          toggle.classList.remove('is-active');
+        }
+      },
+      init: function () {
+        let initialView = window.location.hash.replace('#/', '');
+        if (!initialView) initialView = 'inicio';
+        this.navigate(initialView);
+
+        window.addEventListener('hashchange', () => {
+          let view = window.location.hash.replace('#/', '');
+          if (!view) view = 'inicio';
+          this.navigate(view);
+        });
+      }
+    };
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navMobile = document.getElementById('navMobile');
+    const navOverlay = document.getElementById('navOverlay');
+    function toggleMenu() {
+      menuToggle.classList.toggle('is-active');
+      navMobile.classList.toggle('is-open');
+      navOverlay.classList.toggle('is-visible');
+    }
+    if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+    if (navOverlay) navOverlay.addEventListener('click', toggleMenu);
+
+    // Modal Logic para Tratamientos
+    const serviceData = {
+      ortodoncia: {
+        title: "Ortodoncia & Alineadores",
+        desc: "Corrige la alineación de tus dientes. Evaluamos tu mordida y te sugerimos el plan ideal, ya sea con alineadores invisibles (para que nadie note tu tratamiento) o brackets estéticos de autoligado rápido.",
+        images: [
+          "https://images.unsplash.com/photo-1599427303058-f0e74f35eb2e?q=80&w=800",
+          "https://images.unsplash.com/photo-1588776813677-77aaf5595b83?q=80&w=800"
+        ],
+        features: [
+          "Opciones 100% estéticas e invisibles.",
+          "Resultados garantizados y tiempos optimizados.",
+          "Citas de control puntuales y sin molestias.",
+          "Especialistas certificados en ortodoncia."
+        ]
+      },
+      sonrisa: {
+        title: "Diseño de Sonrisa (Carillas)",
+        desc: "Si no te gusta el color, el tamaño o el desgaste de tus dientes, las carillas son la solución ideal. Colocamos finas láminas sobre el diente original para crear una sonrisa blanca, simétrica y súper natural.",
+        images: [
+          "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800",
+          "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800"
+        ],
+        features: [
+          "Materiales que no se manchan ni cambian de color.",
+          "Desgaste mínimo o nulo del diente original (depende del caso).",
+          "Diseño personalizado según las facciones de tu rostro.",
+          "Procedimiento rápido en pocas citas."
+        ]
+      },
+      facial: {
+        title: "Armonización Facial (Bichectomía y Lipopapada)",
+        desc: "Destaca tus pómulos y define el contorno de tu mandíbula. Realizamos bichectomía (extracción de las bolsas de grasa de las mejillas) y lipo de papada en procedimientos mínimamente invasivos y ambulatorios.",
+        images: [
+          "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800",
+          "https://images.unsplash.com/photo-1542044896530-05d85be9b11a?q=80&w=800"
+        ],
+        features: [
+          "Resultados permanentes que estilizan el rostro.",
+          "Cirugía menor realizada bajo anestesia local.",
+          "Rápida recuperación (puedes volver a tus actividades pronto).",
+          "Hecho por especialistas maxilofaciales/estéticos."
+        ]
+      },
+      blanqueamiento: {
+        title: "Blanqueamiento Dental Láser",
+        desc: "Aclara el tono de tus dientes de manera segura. Eliminamos manchas causadas por café, tabaco o alimentos, utilizando geles que protegen tu esmalte y luz LED/Láser aceleradora.",
+        images: [
+          "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800",
+          "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800"
+        ],
+        features: [
+          "Resultados visibles en 1 sola sesión de 45 min.",
+          "Fórmula especial para evitar la sensibilidad dental.",
+          "Tono blanco natural que te hará sonreír más.",
+          "Kit de mantenimiento en casa opcional."
+        ]
+      },
+      general: {
+        title: "Odontología General Integral",
+        desc: "Prevención y restauración. Desde profilaxis profunda con ultrasonido para quitar el sarro, hasta restauraciones estéticas (calzas) y extracciones de cordales (muelas del juicio).",
+        images: [
+          "https://images.unsplash.com/photo-1598256989800-fea5ce5146ac?q=80&w=800",
+          "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800"
+        ],
+        features: [
+          "Uso de resinas importadas de alta estética.",
+          "Equipos modernos para extracciones rápidas.",
+          "Limpiezas profundas sin sangrado excesivo.",
+          "Evaluación completa con cámara intraoral."
+        ]
+      }
+    };
+
+    function openModal(id) {
+      const data = serviceData[id];
+      if (!data) return;
+
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDesc').innerText = data.desc;
+
+      let galleryHtml = '';
+      data.images.forEach(img => {
+        galleryHtml += `<img src="${img}" alt="${data.title}">`;
+      });
+      document.getElementById('modalGallery').innerHTML = galleryHtml;
+
+      let featuresHtml = '';
+      data.features.forEach(feat => {
+        featuresHtml += `<li>${feat}</li>`;
+      });
+      document.getElementById('modalFeaturesList').innerHTML = featuresHtml;
+
+      document.getElementById('serviceModal').classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('serviceModal').classList.remove('is-visible');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => app.init());
+  </script>
+</body>
+
+</html>
